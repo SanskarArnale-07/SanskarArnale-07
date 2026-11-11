@@ -60,7 +60,8 @@
     <td width="50%" valign="top">
       <h3>📘 ProofLoop</h3>
       <p>An evidence-driven career project connecting skills to demonstrable proof of work and actionable improvement plans.</p>
-      <a href="https://github.com/SanskarArnale-07/ProofLoop">[ SOURCE CODE ]</a>
+      <a href="https://proofloop-sand-six.vercel.app/">[ LIVE DEMO ]</a>
+      &nbsp; <a href="https://github.com/SanskarArnale-07/ProofLoop">[ SOURCE CODE ]</a>
     </td>
   </tr>
 </table>
