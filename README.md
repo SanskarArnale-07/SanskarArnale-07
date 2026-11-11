@@ -4,7 +4,7 @@
   <br/>
   <img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=10&duration=2800&pause=900&color=B9A7D2&center=true&vCenter=true&width=650&height=45&lines=COMPUTER+ENGINEERING;C%2B%2B+%2F+DSA+%2F+CYBERSECURITY;BUILDING+ONE+COMMIT+AT+A+TIME" alt="Animated pixel-style introduction" />
   <br/>
-  <img src="https://img.shields.io/badge/PROFILE%20VISITORS-5-d7c3e8?style=flat-square" alt="Profile visitors: 5 (static display)" />
+  <img src="https://komarev.com/ghpvc/?username=SanskarArnale-07&style=flat-square&color=d7c3e8&label=PROFILE+VISITORS" alt="Live profile visitor count" />
   <img src="https://img.shields.io/github/followers/SanskarArnale-07?style=flat-square&color=a9b99b&label=FOLLOWERS" alt="GitHub followers" />
 </div>
 
