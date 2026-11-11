@@ -22,8 +22,19 @@ jobs:
 
       - name: Keep snake animation inside the contribution grid
         run: |
+          # The generator may leave output files/directories read-only.
+          chmod -R u+rwX dist
           for file in dist/github-contribution-grid-snake*.svg; do
-            sed -i 's/viewBox="-16 -32 880 192" width="880" height="192"/viewBox="0 0 848 112" width="848" height="112"/' "$file"
+            python - "$file" <<'PY'
+          import pathlib, sys
+          path = pathlib.Path(sys.argv[1])
+          svg = path.read_text()
+          svg = svg.replace(
+              'viewBox="-16 -32 880 192" width="880" height="192"',
+              'viewBox="0 0 848 112" width="848" height="112"'
+          )
+          path.write_text(svg)
+          PY
           done
 
       - name: Publish to output branch
