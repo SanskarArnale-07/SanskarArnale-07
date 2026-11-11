@@ -68,7 +68,6 @@
 ## ✦ ACHIEVEMENTS / CHECKPOINTS
 
 - 🧩 **100+** DSA problems solved
-- 🏁 Hackathon participant
 - 🛠️ **Technical Head**, ACM Student Chapter
 - 🛡️ Exploring cybersecurity through hands-on learning
 
