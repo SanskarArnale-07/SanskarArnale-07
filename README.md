@@ -14,11 +14,11 @@
 
 <pre>
 ┌──────────────────────────────────────────────┐
-│  PLAYER : Sanskar                             │
-│  CLASS  : Computer Engineering                 │
-│  QUEST  : Learn. Build. Break. Improve.        │
-│  FOCUS  : C++ • DSA • Cybersecurity           │
-│  STATUS : Always exploring something new      │
+│  PLAYER : Sanskar                            │
+│  CLASS  : Computer Engineering               │
+│  QUEST  : Learn. Build. Break. Improve.      │
+│  FOCUS  : C++ • DSA • Cybersecurity          │
+│  STATUS : Always exploring something ne      │
 └──────────────────────────────────────────────┘
 </pre>
 
