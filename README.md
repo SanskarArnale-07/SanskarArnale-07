@@ -13,13 +13,13 @@
 ## ✦ PLAYER PROFILE
 
 ```text
-┌──────────────────────────────────────────────────────────────┐
-│  PLAYER   Sanskar                                             │
-│  CLASS    Computer Engineering                                │
-│  QUEST    Learn → Build → Improve                             │
-│  FOCUS    C++ · DSA · Cybersecurity                           │
-│  STATUS   Online / always curious                             │
-└──────────────────────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────────────┐
+│  PLAYER   Sanskar                                          │
+│  CLASS    Computer Engineering                             │
+│  QUEST    Learn → Build → Improve                          │
+│  FOCUS    C++ · DSA · Cybersecurity                        │
+│  STATUS   Online / always curious                          │
+└────────────────────────────────────────────────────────────┘
 ```
 
 - 🎓 Second-year Computer Engineering student at **D. Y. Patil Institute of Technology, Pimpri**
