@@ -77,7 +77,7 @@
 ## ✦ THE CONTRIBUTION GARDEN
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/SanskarArnale-07/SanskarArnale-07/output/github-contribution-grid-snake-dark.svg" alt="Animated contribution snake" />
+  <img src="https://raw.githubusercontent.com/SanskarArnale-07/SanskarArnale-07/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Animated contribution snake" />
 </div>
 
 ---
