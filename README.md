@@ -53,7 +53,7 @@
     <td width="50%" valign="top">
       <h3>🌿 LifeAdmin</h3>
       <p>A personal life-management app bringing everyday admin, tasks, bills, appointments and reminders into one place.</p>
-      <a href="https://github.com/Srushti07-del/LifeAdmin">⌘ Source code</a>
+      <a href="https://lifeadmin-web.onrender.com">↗ Live demo</a> · <a href="https://github.com/Srushti07-del/LifeAdmin">⌘ Source code</a>
     </td>
     <td width="50%" valign="top">
       <h3>📘 ProofLoop</h3>
