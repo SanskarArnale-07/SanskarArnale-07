@@ -20,6 +20,12 @@ jobs:
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
+      - name: Keep snake animation inside the contribution grid
+        run: |
+          for file in dist/github-contribution-grid-snake*.svg; do
+            sed -i 's/viewBox="-16 -32 880 192" width="880" height="192"/viewBox="0 0 848 112" width="848" height="112"/' "$file"
+          done
+
       - name: Publish to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
