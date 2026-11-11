@@ -40,25 +40,25 @@
   <tr>
     <td width="50%" valign="top">
       <h3>🕰️ GitHub Time Machine</h3>
-      <p>Turns GitHub activity into a visual journey through your coding history, with a nostalgic, memory-inspired experience.</p>
-      <a href="https://github.com/SanskarArnale-07/github-time-machine">↗ View project</a>
+      <p>A nostalgic, memory-inspired way to turn GitHub activity into a visual journey through your coding history.</p>
+      <a href="https://github-time-machine-sage.vercel.app">↗ Live demo</a> · <a href="https://github.com/SanskarArnale-07/github-time-machine">⌘ Source code</a>
     </td>
     <td width="50%" valign="top">
       <h3>🧭 Career Compass</h3>
-      <p>A career exploration platform that helps students discover suitable paths through a structured strengths and interests assessment.</p>
-      <a href="https://github.com/SanskarArnale-07/Career-Compass">↗ View project</a>
+      <p>A guided career exploration platform helping students discover suitable paths through strengths and interests.</p>
+      <a href="https://career-compass-six-sand.vercel.app">↗ Live demo</a> · <a href="https://github.com/SanskarArnale-07/Career-Compass">⌘ Source code</a>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <h3>🌿 LifeAdmin</h3>
-      <p>A personal life-management app for keeping everyday admin in one place: tasks, bills, appointments, documents and reminders.</p>
-      <a href="https://github.com/Srushti07-del/LifeAdmin">↗ View source code</a>
+      <p>A personal life-management app bringing everyday admin, tasks, bills, appointments and reminders into one place.</p>
+      <a href="https://github.com/Srushti07-del/LifeAdmin">⌘ Source code</a>
     </td>
     <td width="50%" valign="top">
       <h3>📘 ProofLoop</h3>
-      <p>An evidence-driven career project that connects skills to demonstrable proof of work and helps turn skill gaps into action.</p>
-      <a href="https://github.com/SanskarArnale-07/ProofLoop">↗ View project</a>
+      <p>An evidence-driven career project connecting skills to demonstrable proof of work and actionable improvement plans.</p>
+      <a href="https://github.com/SanskarArnale-07/ProofLoop">⌘ Source code</a>
     </td>
   </tr>
 </table>
