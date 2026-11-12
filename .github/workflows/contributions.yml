@@ -1,4 +1,4 @@
-name: Update live GitHub contribution count
+name: Update live GitHub contribution stats
 
 on:
   schedule:
@@ -9,52 +9,72 @@ permissions:
   contents: write
 
 jobs:
-  update-count:
+  update-stats:
     runs-on: ubuntu-latest
     steps:
-      - name: Fetch official GitHub contribution total
+      - name: Fetch official GitHub contribution calendar and calculate stats
         uses: actions/github-script@v7
-        id: count
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
+            const fs = require("fs");
             const to = new Date();
             const from = new Date(to.getTime() - 365 * 24 * 60 * 60 * 1000);
             const query = `
               query($login: String!, $from: DateTime!, $to: DateTime!) {
                 user(login: $login) {
                   contributionsCollection(from: $from, to: $to) {
-                    contributionCalendar { totalContributions }
+                    contributionCalendar {
+                      totalContributions
+                      weeks { contributionDays { date contributionCount } }
+                    }
                   }
                 }
               }`;
-            const data = await github.graphql(query, {
+            const result = await github.graphql(query, {
               login: "SanskarArnale-07",
               from: from.toISOString(),
               to: to.toISOString()
             });
-            const total = data.user.contributionsCollection.contributionCalendar.totalContributions;
-            core.setOutput("total", String(total));
-            core.setOutput("updated", to.toISOString().slice(0, 10));
-            core.info(`GitHub reports ${total} contributions in the last 365 days.`);
+            const calendar = result.user.contributionsCollection.contributionCalendar;
+            const days = calendar.weeks.flatMap(week => week.contributionDays)
+              .filter(day => day.date <= to.toISOString().slice(0, 10))
+              .sort((a, b) => a.date.localeCompare(b.date));
 
-      - name: Create contribution count badge SVG
-        env:
-          TOTAL: ${{ steps.count.outputs.total }}
-          UPDATED: ${{ steps.count.outputs.updated }}
-        run: |
-          mkdir -p dist
-          cat > dist/contributions.svg <<EOF
-          <svg xmlns="http://www.w3.org/2000/svg" width="560" height="150" viewBox="0 0 560 150">
-            <rect width="560" height="150" rx="14" fill="#27243d"/>
-            <text x="28" y="38" fill="#d7c3e8" font-family="Arial,sans-serif" font-size="16">GITHUB CONTRIBUTIONS · LAST 365 DAYS</text>
-            <text x="28" y="105" fill="#fff0d6" font-family="Arial,sans-serif" font-size="54" font-weight="700">${TOTAL}</text>
-            <text x="190" y="102" fill="#a9b99b" font-family="Arial,sans-serif" font-size="17">contributions</text>
-            <text x="532" y="130" text-anchor="end" fill="#b9b0c8" font-family="Arial,sans-serif" font-size="11">Updated ${UPDATED} · GitHub GraphQL</text>
-          </svg>
-          EOF
+            let current = 0;
+            let cursor = days.length - 1;
+            if (cursor >= 0 && days[cursor].contributionCount === 0) cursor--;
+            while (cursor >= 0 && days[cursor].contributionCount > 0) {
+              current++;
+              cursor--;
+            }
 
-      - name: Publish badge to output branch
+            let longest = 0;
+            let run = 0;
+            for (const day of days) {
+              run = day.contributionCount > 0 ? run + 1 : 0;
+              longest = Math.max(longest, run);
+            }
+
+            const total = calendar.totalContributions;
+            const updated = to.toISOString().slice(0, 10);
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="900" height="230" viewBox="0 0 900 230">
+              <rect width="900" height="230" rx="16" fill="#27243d"/>
+              <text x="450" y="38" text-anchor="middle" fill="#d7c3e8" font-family="Arial,sans-serif" font-size="17" letter-spacing="1">GITHUB ACTIVITY · LAST 365 DAYS</text>
+              <path d="M300 62V185 M600 62V185" stroke="#8f829e" stroke-width="1.5"/>
+              <text x="150" y="119" text-anchor="middle" fill="#fff0d6" font-family="Arial,sans-serif" font-size="48" font-weight="700">${total}</text>
+              <text x="150" y="151" text-anchor="middle" fill="#d7c3e8" font-family="Arial,sans-serif" font-size="17">CONTRIBUTIONS</text>
+              <text x="450" y="119" text-anchor="middle" fill="#fff0d6" font-family="Arial,sans-serif" font-size="48" font-weight="700">${current}</text>
+              <text x="450" y="151" text-anchor="middle" fill="#d7c3e8" font-family="Arial,sans-serif" font-size="17">CURRENT STREAK</text>
+              <text x="750" y="119" text-anchor="middle" fill="#fff0d6" font-family="Arial,sans-serif" font-size="48" font-weight="700">${longest}</text>
+              <text x="750" y="151" text-anchor="middle" fill="#d7c3e8" font-family="Arial,sans-serif" font-size="17">LONGEST STREAK</text>
+              <text x="450" y="207" text-anchor="middle" fill="#b9b0c8" font-family="Arial,sans-serif" font-size="12">Updated ${updated} · GitHub GraphQL</text>
+            </svg>`;
+            fs.mkdirSync("dist", { recursive: true });
+            fs.writeFileSync("dist/contributions.svg", svg);
+            core.info(`Official stats: ${total} contributions, ${current}-day current streak, ${longest}-day longest streak.`);
+
+      - name: Publish stats card to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
