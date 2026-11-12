@@ -72,8 +72,6 @@
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/SanskarArnale-07/SanskarArnale-07/output/contributions.svg" width="70%" alt="Official GitHub contributions in the last 365 days, refreshed automatically every six hours" />
-  <br/>
-  <img width="70%" src="https://github-readme-streak-stats.herokuapp.com/?user=SanskarArnale-07&hide_border=true&hide_total=true&background=27243d&ring=d7c3e8&fire=e9c7b8&currStreakLabel=f7e7c9&sideLabels=d7c3e8&currStreakNum=fff0d6&sideNums=fff0d6&dates=b9b0c8" alt="GitHub current and longest contribution streak" />
 </div>
 
 ## ✦ THE CONTRIBUTION GARDEN
