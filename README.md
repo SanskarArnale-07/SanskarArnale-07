@@ -71,7 +71,7 @@
 ## ✦ SAVE POINT / GITHUB ACTIVITY
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/SanskarArnale-07/SanskarArnale-07/output/contributions.svg" width="80%" alt="GitHub contributions, current streak and longest streak, calculated from the official GitHub contribution calendar" />
+  <img src="https://raw.githubusercontent.com/SanskarArnale-07/SanskarArnale-07/output/contributions.svg?v=20261112-3stats" width="80%" alt="GitHub contributions, current streak and longest streak, calculated from the official GitHub contribution calendar" />
 </div>
 
 ---
