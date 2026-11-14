@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="230" viewBox="0 0 900 230">
+  <rect width="900" height="230" rx="16" fill="#27243d"/>
+  <text x="450" y="38" text-anchor="middle" fill="#d7c3e8" font-family="Arial,sans-serif" font-size="17" letter-spacing="1">GITHUB ACTIVITY · LAST 365 DAYS</text>
+  <path d="M300 62V185 M600 62V185" stroke="#8f829e" stroke-width="1.5"/>
+  <text x="150" y="119" text-anchor="middle" fill="#fff0d6" font-family="Arial,sans-serif" font-size="48" font-weight="700">561</text>
+  <text x="150" y="151" text-anchor="middle" fill="#d7c3e8" font-family="Arial,sans-serif" font-size="17">CONTRIBUTIONS</text>
+  <text x="450" y="119" text-anchor="middle" fill="#fff0d6" font-family="Arial,sans-serif" font-size="48" font-weight="700">4</text>
+  <text x="450" y="151" text-anchor="middle" fill="#d7c3e8" font-family="Arial,sans-serif" font-size="17">CURRENT STREAK</text>
+  <text x="750" y="119" text-anchor="middle" fill="#fff0d6" font-family="Arial,sans-serif" font-size="48" font-weight="700">17</text>
+  <text x="750" y="151" text-anchor="middle" fill="#d7c3e8" font-family="Arial,sans-serif" font-size="17">LONGEST STREAK</text>
+  <text x="450" y="207" text-anchor="middle" fill="#b9b0c8" font-family="Arial,sans-serif" font-size="12">Updated 2026-11-14 · GitHub GraphQL</text>
+</svg>
